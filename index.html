@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+        }
+    </script>
+</head>
+<body>
+    <div class="app">
+        <h1 class="app__header">Tic Tac Toe</h1>
+        <div class="app__content">
+            <hr class="border-line app__border" />
+            <div id="work-area">
+                <div class="gameWrap">
+                    <div class="playerInfo">
+                        <div id="showMsg">X starts the game</div>
+                        <div class="singBoxSign cross playerInfoHighigher" data-text="X" id="cross" draggable="true" ondragstart="drag(event)"></div>
+                        <div class="singBoxSign zero" id="zero" data-text="O" draggable="false" ondragstart="drag(event)"></div>
+                        <span id="resetGame">Start again?</span>
+                    </div>   
+                    <div class="boxWrap">
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>
+                        <div class="singBox"></div>                             
+                    </div>
+                    
+                    <div>
+                       
+                    </div>
+
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <hr class="border-line app__border" />
+
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>   
+</body>
+</html>
